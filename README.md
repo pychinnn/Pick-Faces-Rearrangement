@@ -1,9 +1,10 @@
 # Pick Faces Rearrangement
 ## Executive Summary
 This project focuses on increasing storage capacity and improving warehouse efficiency through **inventory segmentation** and **demand variability analysis**. As the warehouse approaches its storage limit, a transition toward a double-deep racking system was proposed to support future growth while maintaining operational performance.
-To support this transformation, multiple analytical techniques were integrated, including **ABC–XYZ Matrix Classification** and **Market Basket Analysis (MBA)**. The outcome provides a data-driven slotting strategy, where fast-moving and operationally critical products are prioritized for optimal placement, while frequently picked-together SKUs are positioned closer to improve picking productivity and warehouse flow.
+To support this transformation, PostgreSQL was used to clean and prepare transactional data before integrating analytical techniques including **ABC–XYZ Matrix Classification** and **Market Basket Analysis (MBA)**. The outcome provides a data-driven slotting strategy, where fast-moving and operationally critical products are prioritized for optimal placement, while frequently picked-together SKUs are positioned closer to improve picking productivity and warehouse flow.
 
 ## Key Achievements and Methodologies Used
+* Prepared and cleaned 1.5M+ transactional records using PostgreSQL to support downstream Market Basket Analysis by removing invalid transactions, filtering inactive SKUs, and eliminating duplicate order lines.
 * Combined **ABC Analysis** and **XYZ Analysis** into an **ABC–XYZ Matrix** to support more effective slotting and inventory allocation decisions.
 * Applied **Market Basket Analysis (MBA)** using the Apriori algorithm to identify products frequently picked together.
 * Developed a **pick-face rearrangement strategy** by considering SKU movement, demand stability, and product affinity.
